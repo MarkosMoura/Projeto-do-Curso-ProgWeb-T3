@@ -35,7 +35,7 @@ public class TelaHome extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jLabel2 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        sair = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
@@ -88,8 +88,13 @@ public class TelaHome extends javax.swing.JFrame {
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton2.setText("Novidades");
 
-        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton4.setText("Sair");
+        sair.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        sair.setText("Sair");
+        sair.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                sairMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -104,7 +109,7 @@ public class TelaHome extends javax.swing.JFrame {
                             .addComponent(jLabel2)
                             .addComponent(jButton2)
                             .addComponent(jButton1)
-                            .addComponent(jButton4))
+                            .addComponent(sair))
                         .addGap(0, 562, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -120,7 +125,7 @@ public class TelaHome extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton2)
                 .addGap(18, 18, 18)
-                .addComponent(jButton4)
+                .addComponent(sair)
                 .addContainerGap(203, Short.MAX_VALUE))
         );
 
@@ -213,7 +218,13 @@ public class TelaHome extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void sairMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sairMouseClicked
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_sairMouseClicked
 
     /**
      * @param args the command line arguments
@@ -254,7 +265,6 @@ public class TelaHome extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JLabel jLabel1;
@@ -269,5 +279,6 @@ public class TelaHome extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JButton sair;
     // End of variables declaration//GEN-END:variables
 }
